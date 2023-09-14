@@ -11,11 +11,13 @@ namespace _Scripts
     {
         [SerializeField] private InputReceiver inputReceiver;
         [SerializeField] private GroundChecker groundChecker;
-        
+
         [Header("Movement")]
         [SerializeField] private float speed;
+
         [SerializeField] private float jumpForce;
 
+        private const float TOLERANCE = 0.001f;
         private Rigidbody2D _rigidbody2D;
 
         private void Awake()
@@ -45,7 +47,7 @@ namespace _Scripts
             bool CanJump()
             {
                 return groundChecker.CheckGround()
-                       && _rigidbody2D.velocity.y == 0;
+                    && Mathf.Abs(_rigidbody2D.velocity.y) <= TOLERANCE;
             }
         }
 

@@ -1474,6 +1474,10 @@ PrefabInstance:
       propertyPath: offsetX
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 2124960667491840470, guid: 9bb877959d0c02f4ca383f54355ab157, type: 3}
+      propertyPath: raycastDistance
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 2613944573661043310, guid: 9bb877959d0c02f4ca383f54355ab157, type: 3}
       propertyPath: m_Name
       value: Square
